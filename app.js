@@ -2,13 +2,7 @@ const purchaseAmount = 2000;
 const availableBonuses = 10000;
 
 const maxBonuses = purchaseAmount / 2;
-let appliedBonuses;
-
-if (maxBonuses <= availableBonuses) {
-    appliedBonuses = maxBonuses;
-} else {
-    appliedBonuses = availableBonuses;
-}
+const appliedBonuses = maxBonuses <= availableBonuses ? maxBonuses : availableBonuses;
 
 console.log(appliedBonuses)
 
