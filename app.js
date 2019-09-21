@@ -1,9 +1,17 @@
-const purchaseAmount = 1000;
-const bonuses = 900;
+const purchaseAmount = 2000;
+const availableBonuses = 10000;
 
-let total = purchaseAmount - bonuses;
-if (total < 0) {
-    total = 0;
+const maxBonuses = purchaseAmount / 2;
+let appliedBonuses;
+
+if (maxBonuses <= availableBonuses) {
+    appliedBonuses = maxBonuses;
+} else {
+    appliedBonuses = availableBonuses;
 }
+
+console.log(appliedBonuses)
+
+const total = purchaseAmount - appliedBonuses;
 
 console.log(total);
